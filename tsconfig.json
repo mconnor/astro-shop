@@ -1,3 +1,20 @@
 {
-  "extends": "astro/tsconfigs/strict"
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "dist",
+    "rootDir": ".",
+  },
+  "include": [
+    "**.config.mjs",
+    ".astro/types.d.ts",
+    "**/*.d.ts",
+    "src",
+    "tailwind.config.js"
+  ],
+  "exclude": [
+    "dist/",
+    ".astro/",
+    ".turbo/",
+  ]
 }
